@@ -1,0 +1,181 @@
+header{
+    position: relative;
+    width:100%;
+    z-index:999;
+    width:100%;
+    margin:0;
+
+    .top-nav{
+        background-color:$background-color;
+        padding:.625rem 0;
+        position: relative;
+        width:100%;
+
+        @media screen and(max-width:767.98px){
+            display:none;
+        }
+
+        .top-se-items{
+            display:block;
+            width:100%;
+
+            ol{
+                li{
+                    display:inline-block;
+                    font-size:.9375rem;
+                    color:$color-primary;
+                    margin:0 .3125rem;
+
+                    i{
+                        font-size:1.125rem;
+                        margin:0 .625rem;
+                        color:$icons-color;
+                    }
+                }
+            }
+        }
+
+        .right-side{
+            text-align:right;
+        }
+    }
+
+    .main-nav{
+        display:flex;
+        flex-wrap:wrap;
+        flex:1 1 100%;
+        max-width:100%;
+        width:100%;
+        align-items:center;
+        justify-content:space-between;
+        padding:.625rem 3.125rem;
+        position: relative;
+
+        @media screen and(max-width:767.98px){
+            padding:.625rem 1.25rem;
+        }
+
+        .logo{
+            width:20%;
+            max-width:20%;
+            display:block;
+            float: left;
+
+            @media screen and(max-width:767.98px){
+                width:100%;
+                max-width:100%;
+            }
+        }
+
+        .menu{
+            display:block;
+            width:80%;
+            max-width:80%;
+            position: relative;
+            transition:all ease .5s;
+            transform: translateX(0);
+            text-align:center;
+            &.active{
+                display:block;
+                transform: translate(0);
+            }
+
+            @media screen and(max-width:767.98px){
+                width:100%;
+                max-width:100%;
+                transform: translateX(-100%);
+                display:none;
+                text-align:left;
+                
+            }
+
+            ul{
+                li{
+                    display:inline-block;
+                    padding:.3125rem 1.125rem;
+                    font-size: 1rem;
+                    position: relative;
+
+                    &::before{
+                        position: absolute;
+                        z-index:1;
+                        content:"";
+                        left:0;
+                        bottom:0;
+                        width:0;
+                        height:100%;
+                        border-radius:1.25rem;
+                        background:$icons-color;
+                        transition: width .6s cubic-bezier(.25,.8,.25,1) 0s;
+                    }
+
+                    &:hover{
+                        &::before{
+                            width:100%;
+                        }
+                        a{
+                            color:$color-primary;
+                        }
+                    }
+
+                    @media screen and(max-width:767.98px){
+                        display:block;
+                        padding:.3125rem .625rem;
+                        width:fit-content;
+                    }
+
+                    @media (min-width: 768px) and (max-width: 991.98px){
+                        padding:.3125rem .3125rem;
+
+                    }
+
+                    a{
+                        color:$heading-color;
+                        display:block;
+                        text-transform:uppercase;
+                        font-weight: 600;
+                        letter-spacing:.4px;
+                        position: relative;
+                        padding:.125rem 0;
+                        transition:all ease .5s;
+                        z-index: 2;
+
+                        @media screen and(max-width:767.98px){
+                            display:inline-block;
+                            color:$icons-color;
+                        }
+                    }
+                }
+            }
+        }
+
+        .menu-toggle {
+            height: 2.5rem;
+            width: 2.5rem;
+            align-items: center;
+            margin: 0px 0 0 2.5rem;
+            opacity: 0;
+            visibility: hidden;
+            position: absolute;
+            right: .625rem;
+            top: .625rem;
+            color: $icons-color;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 999;
+
+            i {
+                position: absolute;
+                font-size:1.5625rem;
+                color: $icons-color;
+                font-size:2.1875rem;
+            }
+
+            @media screen and (max-width: 767.98px) {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+}
