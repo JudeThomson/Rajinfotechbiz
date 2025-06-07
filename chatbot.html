@@ -1,0 +1,60 @@
+<!-- chatbot.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chatbot - Raj Infotech Biz</title>
+    <link rel="stylesheet" href="chatbot.css" />
+  </head>
+  <body>
+    <!-- Chatbot Widget -->
+    <div id="chatbot-container">
+      <!-- Floating round icon button -->
+      <div id="chat-toggle-btn" class="chat-button">
+        <img src="assets/images/logo.png" alt="Chat" />
+        <span>Chat with us ⬆️</span>
+      </div>
+
+      <!-- Full Chat Box -->
+      <div id="chat-box" class="hidden">
+        <div id="chat-header">Raj Business Hub Chat</div>
+        <div id="chat-body">
+          <div id="messages"></div>
+          <div id="input-area">
+            <input
+              id="userInput"
+              type="text"
+              placeholder="Type a message..."
+              onkeydown="if(event.key==='Enter') sendMessage()"
+            />
+            <button onclick="sendMessage()">Send</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="chatbot.js"></script>
+    <script>
+      const toggleBtn = document.getElementById("chat-toggle-btn");
+      const chatBox = document.getElementById("chat-box");
+      const messages = document.getElementById("messages");
+
+      toggleBtn.addEventListener("click", () => {
+        const isHidden = chatBox.classList.toggle("hidden");
+
+        if (!isHidden && messages.innerHTML.trim() === "") {
+          appendMessage("bot", showMainMenu());
+          awaitingOption = true;
+        }
+        // Change button content
+        if (!isHidden) {
+          toggleBtn.innerHTML = `<span>Close</span>`;
+          toggleBtn.style.marginLeft = "235px";
+          toggleBtn.style.borderRadius = "10px";
+        } else {
+          toggleBtn.innerHTML = `<img src="assets/images/logo.png" alt="Chat" /><span>Chat with us</span>`;
+        }
+      });
+    </script>
+  </body>
+</html>

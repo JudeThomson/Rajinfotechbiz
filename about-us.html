@@ -5,16 +5,33 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title>About Us</title>
+        <meta name="description" content="Raj InfotechBiz Solutions Pvt. Ltd. - Innovative Tech Solutions">
+        <meta name="keywords" content="Raj InfotechBiz Solutions, software products, Services, Your Trusted IT Partner, Healthcare IT, ">
+        <meta name="author" content="R.Wilfred Raju">
         <link rel="stylesheet" href="assets/css/bootstrap.min.css">
         <link rel="stylesheet" href="assets/css/plugins/owl.carousel.min.css">
+        <link rel="stylesheet" href="assets/uicons-brands/css/uicons-brands.css">
         <link rel="stylesheet" href="assets/css/all.min.css">
         <link rel="stylesheet" href="assets/font/flaticon.css">
         <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="chatbot.css">
         <link rel="icon" href="assets/images/logo.png" type="image/icon type">
     </head>
     <style>
+        .h4_heading{
+            font-size: 28px;
+        }
         p{
-            font-size: 18px;
+            font-size: 16px;
+        }
+        .h2_heading{
+            font-size: 24px;
+        }
+        .about_us_content_one{
+            font-size: 16px !important;
+        }
+        .content_last p{
+            font-size: 16px;
         }
     </style>
     <!-- =================Body Started==================== -->
@@ -28,15 +45,14 @@
                         <div class="col-md-6 col-sm-6 col-xs-12">
                             <div class="top-se-items">
                                 <ol>
-                                    <li><i class="flaticon-phone-call"></i>+91 9444338475</li>
-                                    <li><i class="flaticon-location"></i>India</li>
+                                    <li><i class="flaticon-phone-call"></i>+91 7010102832</li>
                                 </ol>
                             </div>
                         </div>
                         <div class="col-md-6 col-sm-6 col-xs-12">
                             <div class="top-se-items right-side">
                                 <ol>
-                                    <li><i class="flaticon-email"></i>info@rajinfotechbiz.com</li>
+                                    <li><i class="fi-brands-whatsapp"></i>+91 9444338475</li>
                                 </ol>
                             </div>
                         </div>
@@ -61,9 +77,13 @@
                                 <a class="desktop_button" href="about-us.html">About Us</a>                                
                                 <ul class="submenu about-us founder">
                                     <li>
+                                        <a class="founder_link res sec_about" href="about-us.html">About Us</a>
                                         <a class="founder_link res found" href="founder_profile.html">Founder Profile</a>
                                     </li>
                                 </ul>
+                            </li> 
+                            <li>
+                                <a class="res" href="raj-business-hub.html">Raj Business Hub</a>
                             </li>                            
                             <li class="about-us">
                                 <a class="mobile_button" href="software_products.html">Software Products</a>
@@ -73,15 +93,33 @@
                                     <li><a class="software_2 res soft" href="raj_retail_pos.html">Raj Retail POS</a></li>
                                     <li><a class="software_3 res soft" href="d1tc.html">Docter 1 Teleclinic</a></li>
                                 </ul>
-                            </li> 
+                            </li>                             
                             <li class="about-us">
                                 <a class="mobile_button" href="services.html">Services</a>
-                                <a class="desktop_button" href="services.html">Services</a>
+                                <a href="services.html" class="desktop_button">Services</a>
                                 <ul class="submenu about-us services">
-                                    <li><a class="services_1 res serve" href="management_consulting.html" id="">Management Consulting</a></li>
-                                    <li><a class="services_2 res serve" href="productivity_improvement.html">Productivity Improvement</a></li>
-                                    <li><a class="services_3 res serve" href="edp.html">Entrepreneur Development Programme</a></li>
-                                    <li><a class="services_4 res serve" href="healthcare_it.html">Healthcare IT</a></li>
+                                    <li>
+                                        <a href="consult.html" class="desktop_button child">Consulting</a>
+                                        <a style="text-transform: capitalize !important;" class="mobile_button mobile_child" href="#">Consulting</a>
+                                        <ul class="childmenu about-us con">
+                                            <li><a class="services_1 res serve" href="management_consulting.html">Management Consulting</a></li>
+                                            <li><a class="services_2 res serve" href="productivity_improvement.html">Productivity Improvement</a></li>
+                                            <li><a class="services_3 res serve" href="edp.html">Entrepreneur Development Programme</a></li>
+                                            <li><a class="services_4 res serve" href="healthcare_it.html">Healthcare IT</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="training.html" class="desktop_button child ct" style="position: relative; z-index: 1;">Corporate Training</a>
+                                        <a style="text-transform: capitalize !important;" href="#" class="mobile_button mobile_child">Corporate Training</a>
+                                        <ul class="childmenu about-us con_2">
+                                            <li><a class="services_5 res serve" href="hr_analytics.html">HR Analytics</a></li> <br>
+                                            <li><a class="services_6 res serve" href="leadership.html">Leadership</a></li>
+                                            <li><a class="services_7 res serve" href="productivity_improvement_training.html">Productivity Improvement</a></li>
+                                            <li><a class="services_8 res serve" href="six_sigma.html">Six Sigma Green Belt</a></li>
+                                            <li><a class="services_10 res serve" href="ai_tools.html">AI and AI Tools</a></li>
+                                            <li><a class="services_9 res serve" href="edp_training.html">Entrepreneur Development Programme</a></li>
+                                        </ul>
+                                    </li>
                                 </ul>
                             </li>
                             <li>
@@ -102,17 +140,16 @@
                         <div class="col-12">
                             <div class="wrapper">
                                 <h2>About Us</h2>
-                                <ol>
-                                    <li>Home<i class="flaticon-right"></i></li>
-                                    <li>About Us</li>
-                                </ol>
+                                <!-- <ol>
+                                    <li style="font-size: 18px;">Home /</li>
+                                    <li style="font-size: 18px;">About Us</li>
+                                </ol> -->
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
-
-            <section class="bg-01 bk">
+            <section class="bg-01 bk" style="background-color: white;">
                 <div class="container">
                     <div class="row ">
                         <div class="col-lg-12 col-md-12 col-sm-12">
@@ -120,7 +157,7 @@
                                 <h4 class="h4_heading">Welcome to Raj InfotechBiz Solutions – Your Trusted IT Partner</h4>
                             </div>
                             <div class="content">
-                                <h2 style="text-align: left;" class="h2_heading">Who We Are:<h2>
+                                <h2 style="text-align: left;" class="h2_heading">Who We Are<h2>
                                 <p class="about_us_content_one">
                                     Raj InfotechBiz Solutions Pvt. Ltd. is a leading provider of comprehensive IT services and
                                     solutions. Established in 2012, we have built a reputation for delivering top-notch technology
@@ -131,11 +168,15 @@
                             </div>  
                         </div>   
                     </div>
+                </div>
+            </section>
+            <section class="bk-two">
+                <div class="container">
                     <div class="row about_row_one">
                         <div class="col-6">                       
                             <div class="content">
-                                <h2 class="h2_heading about_us_head ">Vision</h2>
-                                <p>To be the catalyst for technological evolution, empowering businesses worldwide 
+                                <h2 class="h2_heading about_us_head " style="color: white;">Vision</h2>
+                                <p class="vision_mission" style="font-size: 16px;">To be the catalyst for technological evolution, empowering businesses worldwide 
                                     through innovative solutions and unwavering commitment to excellence, driving 
                                     sustainable growth and transformation in every industry segment we serve.
                                 </p>
@@ -143,8 +184,8 @@
                         </div>
                         <div class="col-6">
                             <div class="content">
-                                <h2 class="h2_heading about_us_head">Mission</h2>
-                                <p>
+                                <h2 class="h2_heading about_us_head" style="color: white;">Mission</h2>
+                                <p class="vision_mission" style="font-size: 16px;">
                                     Our mission is to leverage cutting-edge technology and domain expertise to deliver 
                                     tailored solutions that address the unique challenges of businesses across various
                                     sectors. Through collaborative partnerships, we strive to provide exceptional 
@@ -159,21 +200,20 @@
                     </div>
                 </div>
             </section>
-            <section class="bk-two">
+            <section class="bk">
                 <div class="container" style="text-align: justify;">
                     <div class="row">
                         <div class="col-12">
-                            <h2 style="color: white;" class="h2_heading">What We Do</h2>
+                            <h2 style="color: black;" class="h2_heading">What We Do</h2>
                         </div>
                     </div>
                     <div class="row about_us_row_two">                        
                         <div class="col-4">
                             <img class="about_us_image" style="width: 105%; margin-top: 6%;" src="assets/images/consulting-3.jpeg" alt="">
                         </div>
-                        <div class="col-8 about_us_col_two">
+                        <div class="col-8 about_us_col_two" style="margin-top: 3%;">
                             <div class="i">
-                                <i class="fa fa-dot-circle" aria-hidden="true"></i>
-                                <p>
+                                <p style="margin-bottom: 10px;">
                                     At Raj InfotechBiz Solutions, we offer a wide range of services to meet the diverse needs of
                                     our clients:
                                 </p>   
@@ -224,12 +264,12 @@
                     </div>
                 </div>
             </section>
-            <section class="bk" style="padding-bottom: 3%; padding-top: 3%; text-align: justify;">
+            <section class="bk-two" style="padding-bottom: 3%; padding-top: 3%; text-align: justify;">
                 <div class="container">
-                    <div class="row">
+                    <div class="row why_choose_us">
                             <div class="col-6">
                                 <div class="content">
-                                    <h2 class="h2_heading">
+                                    <h2 class="h2_heading" style="color: white;">
                                         Our Values
                                     </h2>
                                     <div class="i">
@@ -259,7 +299,7 @@
                                 </div>
                             </div>
                         <div class="col-6">
-                            <h2 class="h2_heading">
+                            <h2 class="h2_heading" style="color: white;">
                                 Why choose us
                             </h2>
                             <div class="content">
@@ -292,23 +332,23 @@
                     </div>
                 </div>
             </section>
-            <section class="bk-two">
+            <section class="bk">
                 <div class="container" style="text-align: justify;">
                     <div class="row">
                         <div class="col-12">
-                            <h5 style="color: white;" class="h5_heading">Our Commitment:</h5>
+                            <h5 style="color: black;" class="h2_heading">Our Commitment</h5>
                             <div class="content_last">
-                                <p>
+                                <p style="margin-top: 8px;">
                                     At Raj InfotechBiz Solutions, we are committed to delivering excellence in every project we
                                     undertake. We aim to build long-lasting relationships with our clients by providing reliable, 
                                     high-quality IT services that drive success.
-                                </p> <br>
-                                <p>
+                                </p>
+                                <p style="margin-top: 16px;">
                                     Thank you for considering Raj InfotechBiz Solutions as your IT partner. We look forward to working
                                     with you and helping your business thrive in the digital age. 
-                                </p> <br>
-                                <p>
-                                    For more information or to discuss your IT needs, please <span><a style="color: white;" href="contact-us.html">contact us</a></span> today.
+                                </p>
+                                <p style="margin-top: 16px;">
+                                    For more information or to discuss your IT needs, please <span><a style="color: black;" href="contact-us.html">contact us</a></span> today.
                                 </p>
                             </div>
                         </div>
@@ -340,6 +380,11 @@
                                 <li>
                                     <a style="color: black;" href="about-us.html">
                                         <i class="flaticon-angle-arrow-pointing-to-right"></i>About Us
+                                    </a>
+                                </li>
+                                <li>
+                                    <a style="color: black;" href="raj-business-hub.html">
+                                        <i class="flaticon-angle-arrow-pointing-to-right"></i>Raj Business Hub
                                     </a>
                                 </li>
                                 <li>
@@ -379,7 +424,7 @@
 
                     <div class="col-12">
                         <div class="copy-right">
-                            Copyright © 2024 Raj InfotechBiz Solutions Pvt. Ltd. | 
+                            Copyright © 2025 Raj InfotechBiz Solutions Pvt. Ltd. | 
                             <a href="disclaimer.html">Disclaimer   </a>  |
                             <a href="privacy_policy.html"> Privacy Policy</a> |
                             <a href="sitemap.html">Sitemap</a> |
@@ -392,30 +437,95 @@
         <!-- *********************************************************** -->
     </body>
     <script>
-        document.getElementById("submit-form").addEventListener("click", function(event) {
+        // Form Submission
+        document.getElementById("submit-form").addEventListener("click", function(event) 
+        {
             event.preventDefault();
             
             document.getElementById("contact-form").submit();
         });
-        document.addEventListener("DOMContentLoaded", function() {
-            var mobileButtons = document.querySelectorAll('.mobile_button');
-            
-            mobileButtons.forEach(function(button) {
-                button.addEventListener('click', function(event) {
+        // Responsive
+        document.addEventListener("DOMContentLoaded", function () {
+            var mobileChildButtons = document.querySelectorAll('.mobile_child'); 
+            mobileChildButtons.forEach(function (button) {
+                button.addEventListener('click', function (event) {
                     event.preventDefault(); 
-                    
-                    var submenu = this.nextElementSibling;
-                    
-                    if (submenu) {
-                        submenu.style.display = "block";
+
+                    var childMenu = this.nextElementSibling; 
+
+                    if (childMenu && childMenu.classList.contains('childmenu')) {
+                        if (childMenu.style.display === "block") {
+                            childMenu.style.display = "none"; 
+                        } else {
+                            document.querySelectorAll('.childmenu').forEach(function (menu) {
+                                menu.style.display = "none";
+                            });
+
+                            childMenu.style.display = "block"; 
+                        }
                     }
                 });
             });
+
+            var mobileButtons = document.querySelectorAll('.mobile_button');
+            mobileButtons.forEach(function (button) {
+                button.addEventListener('click', function (event) {
+                    event.preventDefault(); 
+                });
+            });
         });
+
     </script>
     <!-- =================Body End==================== -->
     <script src="assets/js/jquery-3.2.1.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/plugins/owl.carousel.min.js"></script>
     <script src="assets/js/script.js"></script>
+    <body>
+        <!-- Chatbot Widget -->
+        <div id="chatbot-container">
+            <!-- Floating round icon button -->
+             <div id="chat-toggle-btn" class="chat-button">
+                <img src="assets/images/logo.png" alt="Chat" />
+                <span>Chat with us ⬆️</span>
+            </div>
+            
+            <!-- Full Chat Box -->
+            <div id="chat-box" class="hidden">
+            <div id="chat-header">Raj Business Hub Chat</div>
+            <div id="chat-body">
+                <div id="messages"></div>
+                <div id="input-area">
+                <input id="userInput" type="text" placeholder="Type a message..." onkeydown="if(event.key==='Enter') sendMessage()" />
+                <button onclick="sendMessage()">Send</button>
+                </div>
+            </div>
+            </div>
+        </div>    
+      <script src="chatbot.js"></script>
+      <script>
+        const toggleBtn = document.getElementById("chat-toggle-btn");
+        const chatBox = document.getElementById("chat-box");
+        const messages = document.getElementById("messages");
+
+        toggleBtn.addEventListener("click", () => {
+            const isHidden = chatBox.classList.toggle("hidden");
+
+            if (!isHidden && messages.innerHTML.trim() === "") {
+            appendMessage("bot", showMainMenu());
+            awaitingOption = true;
+            }
+
+            // Change button content
+            if (!isHidden) {
+            toggleBtn.innerHTML = `<span>Close </span>`;
+            toggleBtn.style.marginLeft = "235px"; 
+            toggleBtn.style.borderRadius = "10px 10px 10px 10px";
+            } else {
+            toggleBtn.innerHTML = `<img src="assets/images/logo.png" alt="Chat" /><span>Chat with us</span>`;
+            }
+        });
+        </script>
+
+    </body>
 </html>

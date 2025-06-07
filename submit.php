@@ -1,35 +1,38 @@
 <?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 
-require 'assets/vendor/autoload.php';
+require 'assets/vendor/PHPMailer-master/src/PHPMailer.php';
+require 'assets/vendor/PHPMailer-master/src/SMTP.php';
+require 'assets/vendor/PHPMailer-master/src/Exception.php';
 
-$to = "info@rajinfotechbiz.com";
-$subject = "New message from your website";
-$email = $_POST["email"];
-$message = $_POST["message"];
-$headers = "From: $email";
-$body = "Email: $email\nMessage: $message";
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
 
-$smtpHost = "smtp.gmail.com";
-$smtpPort = 587;
-$smtpUsername = "judethomsonjt@gmail.com";
-$smtpPassword = "llpz govu cjkq ikgw";
+$mail = new PHPMailer(true);
 
-$transport = (new Swift_SmtpTransport($smtpHost, $smtpPort, 'tls'))
-    ->setUsername($smtpUsername)
-    ->setPassword($smtpPassword);
+try {
+    $mail->isSMTP();
+    $mail->Host = 'smtp.gmail.com';
+    $mail->SMTPAuth = true;
+    $mail->Username = 'rajinfoyt@gmail.com';
+    $mail->Password = 'hlsv lfqm xhlz cstp';
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+    $mail->Port = 587;
 
-$mailer = new Swift_Mailer($transport);
+    $mail->setFrom($_POST["email"]);
+    $mail->addAddress('rw.raju@gmail.com');
 
-$message = (new Swift_Message($subject))
-    ->setFrom([$email => 'Your Name'])
-    ->setTo([$to])
-    ->setBody($body);
+    $mail->isHTML(false);
+    $mail->Subject = 'New message from your website';
+    $mail->Body    = "Email: {$_POST["email"]}\nMessage: {$_POST["message"]}";
 
-if ($mailer->send($message)) {
+    $mail->send();
     header("Location: index.html");
     exit;
-} else {
-    echo "Error sending email";
+} catch (Exception $e) {
+    echo "Error sending email: {$mail->ErrorInfo}";
     exit;
 }
 ?>
